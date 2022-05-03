@@ -1,0 +1,294 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.2.1,<3.3.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"800737b41",
+  "vectors":{
+    "width":300,
+    "vectors":20000,
+    "keys":684830,
+    "name":"en_vectors",
+    "mode":"default"
+  },
+  "labels":{
+    "tok2vec":[
+
+    ],
+    "ner":[
+      "Anxiety: GAD",
+      "Anxiety: Generalized Anxiety Disorder",
+      "Anxiety: Level of anxiety",
+      "Anxiety: NA",
+      "Anxiety: Signs and symptoms of anxiety",
+      "Anxiety: family hx: Anxiety state",
+      "Anxiety: hx of anxiety state",
+      "Depression: Family hx: Depression",
+      "Depression: Major depressive disorder",
+      "Depression: NA",
+      "Depression: PHQ",
+      "Depression: Symptoms of depression",
+      "Depression: hx of Depression",
+      "Financial_strain: Financial problem",
+      "Financial_strain: Financially secure",
+      "Financial_strain: NA",
+      "Financial_strain: Unable to afford medication",
+      "Food: Able to obtain food",
+      "Food: Fruit and vegetable intake",
+      "Food: NA",
+      "Food: Provision of food",
+      "Housing: Homeless",
+      "Housing: Housing unsuited to needs",
+      "Housing: Marginally housed",
+      "Housing: NA",
+      "Housing: Stably housed",
+      "Housing: Subsidized housing",
+      "Housing: lives in facility",
+      "Insurance_status: Inadequate healthcare resources",
+      "Insurance_status: NA",
+      "Marital_or_partnership_status: Divorced",
+      "Marital_or_partnership_status: Engaged to be married",
+      "Marital_or_partnership_status: Married",
+      "Marital_or_partnership_status: NA",
+      "Marital_or_partnership_status: Partner",
+      "Marital_or_partnership_status: Partner relationship problem",
+      "Marital_or_partnership_status: Separated",
+      "Marital_or_partnership_status: Single person",
+      "Marital_or_partnership_status: Widowed",
+      "Social_isolation: At risk for loneliness",
+      "Social_isolation: Has social support",
+      "Social_isolation: Lives alone",
+      "Social_isolation: Lives with",
+      "Social_isolation: NA",
+      "Social_isolation: Personal relationship breakdown",
+      "Social_isolation: Social Isolation",
+      "Transportation: Has access to a car",
+      "Transportation: Has access to public transport vehicle",
+      "Transportation: NA",
+      "Transportation: Transportation problems",
+      "pain_and_disability: NA",
+      "pain_and_disability: Pain intensity rating scale, current",
+      "pain_and_disability: Pain intensity rating scale, worst"
+    ]
+  },
+  "pipeline":[
+    "tok2vec",
+    "ner"
+  ],
+  "components":[
+    "tok2vec",
+    "ner"
+  ],
+  "disabled":[
+
+  ],
+  "performance":{
+    "ents_f":0.7408343869,
+    "ents_p":0.7710526316,
+    "ents_r":0.7128953771,
+    "ents_per_type":{
+      "Marital_or_partnership_status: Married":{
+        "p":0.9166666667,
+        "r":1.0,
+        "f":0.9565217391
+      },
+      "pain_and_disability: NA":{
+        "p":0.8888888889,
+        "r":0.9696969697,
+        "f":0.9275362319
+      },
+      "Housing: Stably housed":{
+        "p":0.6923076923,
+        "r":0.8490566038,
+        "f":0.7627118644
+      },
+      "Depression: hx of Depression":{
+        "p":0.8026315789,
+        "r":0.8591549296,
+        "f":0.8299319728
+      },
+      "Depression: Major depressive disorder":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Anxiety: hx of anxiety state":{
+        "p":0.82,
+        "r":0.8367346939,
+        "f":0.8282828283
+      },
+      "Marital_or_partnership_status: Single person":{
+        "p":0.85,
+        "r":1.0,
+        "f":0.9189189189
+      },
+      "Social_isolation: Has social support":{
+        "p":0.55,
+        "r":0.2558139535,
+        "f":0.3492063492
+      },
+      "Marital_or_partnership_status: Widowed":{
+        "p":1.0,
+        "r":0.4,
+        "f":0.5714285714
+      },
+      "Food: Fruit and vegetable intake":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "pain_and_disability: Pain intensity rating scale, worst":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Financial_strain: NA":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "pain_and_disability: Pain intensity rating scale, current":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Food: NA":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Depression: Symptoms of depression":{
+        "p":0.4516129032,
+        "r":0.8235294118,
+        "f":0.5833333333
+      },
+      "Anxiety: Signs and symptoms of anxiety":{
+        "p":0.5588235294,
+        "r":0.6129032258,
+        "f":0.5846153846
+      },
+      "Anxiety: Generalized Anxiety Disorder":{
+        "p":0.4230769231,
+        "r":0.5789473684,
+        "f":0.4888888889
+      },
+      "Social_isolation: At risk for loneliness":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Social_isolation: Lives with":{
+        "p":0.9090909091,
+        "r":0.5555555556,
+        "f":0.6896551724
+      },
+      "Marital_or_partnership_status: Divorced":{
+        "p":1.0,
+        "r":0.7692307692,
+        "f":0.8695652174
+      },
+      "Depression: Family hx: Depression":{
+        "p":0.8333333333,
+        "r":0.7142857143,
+        "f":0.7692307692
+      },
+      "Anxiety: family hx: Anxiety state":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Marital_or_partnership_status: NA":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Social_isolation: Lives alone":{
+        "p":0.9285714286,
+        "r":1.0,
+        "f":0.962962963
+      },
+      "Transportation: Has access to public transport vehicle":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Insurance_status: NA":{
+        "p":0.4,
+        "r":0.1666666667,
+        "f":0.2352941176
+      },
+      "Insurance_status: Inadequate healthcare resources":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Marital_or_partnership_status: Partner":{
+        "p":0.6875,
+        "r":0.6666666667,
+        "f":0.6769230769
+      },
+      "Housing: Homeless":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Transportation: Has access to a car":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Housing: Housing unsuited to needs":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Depression: NA":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Housing: lives in facility":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Depression: PHQ-9":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Housing: Subsidized housing":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Food: Able to obtain food":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Anxiety: NA":{
+        "p":0.5,
+        "r":0.6,
+        "f":0.5454545455
+      },
+      "Marital_or_partnership_status: Partner relationship problem":{
+        "p":0.0,
+        "r":0.0,
+        "f":0.0
+      },
+      "Transportation: Transportation problems":{
+        "p":1.0,
+        "r":0.8888888889,
+        "f":0.9411764706
+      }
+    },
+    "tok2vec_loss":0.0,
+    "ner_loss":928.5444439023
+  }
+}

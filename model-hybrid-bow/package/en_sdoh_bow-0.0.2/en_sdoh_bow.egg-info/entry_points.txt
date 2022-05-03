@@ -1,0 +1,3 @@
+[spacy_models]
+en_sdoh_bow = en_sdoh_bow
+
