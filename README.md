@@ -10,7 +10,7 @@ To install a model, e.g. `model-hybrid-bow`, run following in a shell:
 
 ```sh
 cd model-hybrid-bow
-pip install /package/
+pip install package/
 ```
 
 from within Python:
