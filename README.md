@@ -19,7 +19,7 @@ from within Python:
 import spacy
 nlp = spacy.load("en_sdoh_bow")
 text = "Home Environment:  Lives with family  Work: disability"
-doc = nlp(txt)
+doc = nlp(text)
 
 for ent in doc.ents:
     print(ent, ent.label_, ent._.score, ent._.cui, sep=" | ")
