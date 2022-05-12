@@ -13,7 +13,11 @@ from spacy.language import Language
 from spacy.util import filter_spans
 Span.set_extension("score", default=None, force=True)
 
+import sys
+import os
+sys.path.append( os.path.dirname( __file__ ) ) # this is necessary to locate `lemma_tokenizer.py`
 import lemma_tokenizer
+
 
 class LemmaTokenizer():
     nlp = spacy.load("en_core_web_md")
