@@ -4,6 +4,35 @@
 - CNN NER: [model-cnn-ner](model-cnn-ner)
 - Hybrid BoW-GBM NER: [model-hybrid-bow](model-hybrid-bow)
 
+# Using models
+
+It is advised to create a virtual environment for this package, e.g.:
+`conda create -n sdoh python3.9 spacy`
+
+To install a model, e.g. `model-hybrid-bow`, run following in a shell:
+
+```sh
+cd model-hybrid-bow/package/en_sdoh_bow_cui-0.0.2
+
+pip install spacy
+pip install sklearn
+python -m spacy download en_core_web_md
+
+pip install .
+```
+
+from within Python:
+
+```python
+import spacy
+nlp = spacy.load("en_sdoh_bow_cui")
+text = "Home Environment:  Lives with family  Work: disability"
+doc = nlp(text)
+
+for ent in doc.ents:
+    print(ent, ent.label_, ent._.score, ent._.cui, sep=" | ")
+```
+
 # References
 Automatic Extraction of Social Determinants of Health from Medical Notes of Chronic Lower Back Pain Patients
 Dmytro Lituiev, Benjamin Lacar,  Sang Pak, Peter L Abramowitsch, Emilia De Marchis,  Thomas Peterson
