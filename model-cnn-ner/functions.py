@@ -1,4 +1,3 @@
-
 import sys
 import spacy
 import yaml
@@ -68,4 +67,3 @@ def make_customize_tokenizer():
         nlp.tokenizer.from_bytes(custom_nlp.tokenizer.to_bytes())
         return nlp
     return customize_tokenizer
-
