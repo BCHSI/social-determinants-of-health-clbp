@@ -13,6 +13,8 @@ To install a model, e.g. `model-hybrid-bow`, run following in a shell:
 
 ```sh
 cd model-hybrid-bow/package/en_sdoh_bow_cui-0.0.2
+# OR
+cd model-cnn-ner/packages/en_sdoh_cnn_ner_cui-0.0.0
 
 pip install spacy
 pip install sklearn

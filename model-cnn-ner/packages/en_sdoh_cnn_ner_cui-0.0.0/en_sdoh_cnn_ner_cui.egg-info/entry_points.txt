@@ -1,0 +1,3 @@
+[spacy_models]
+en_sdoh_cnn_ner_cui = en_sdoh_cnn_ner_cui
+
