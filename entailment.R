@@ -91,8 +91,6 @@ entailment <- entailment %>% left_join(sentence_num %>% select(-text, -start, -e
 
 entailment %>% nrow()
 
-entailment %>% filter(note_id == 557484673L) %>% arrange(sentence_id)
-# entailment %>% filter(is.na(sentence_id)) %>% nrow()
 
 #' for 0-padding
 label_probe_rating <- entailment %>% filter(!is.na(sentence_id)) %>% 
@@ -105,8 +103,6 @@ label_probe_rating_level_1 <- entailment %>% filter(!is.na(sentence_id)) %>%
   summarize(label_lvl1_probe_holds =label_lvl1_probe %in% label_lvl1_ref) %>% 
   unique() %>% arrange(note_id, sentence_id)
 
-
-label_probe_rating %>% filter(note_id == 557484673L) %>% arrange(sentence_id)
 
 #' for 1-padding
 #' Merge ground truths for preceding sentence to the probes of current sentence
@@ -142,7 +138,6 @@ entailment_simple <- entailment_simple %>%
 
 entailment_simple %>% nrow()
 
-# entailment_simple %>% filter(note_id == 557484673L) %>% arrange(sentence_id) %>% view()
 
 entailment_simple %>% filter(label_ref=="Food: Fruit and vegetable intake",
                              label_ref==label_probe
@@ -154,8 +149,6 @@ entailment_simple %>% filter(label_ref=="Depression: Family hx: Depression",
 )
 
 #'============
-
-
 entailment_simple_lvl1 <- entailment %>% unique() %>%
   inner_join(label_probe_rating_level_1 %>% unique() )
 
@@ -163,9 +156,6 @@ entailment_simple_lvl1 <- entailment %>% unique() %>%
 prediction_max <- entailment_simple %>% 
   group_by(note_id, premise, label_ref, sentence_id, label_probe, fold, label_level_1, label_probe_holds) %>% 
   summarise(prediction = "entailment" %in% prediction) %>% ungroup()  %>% unique()
-
-# prediction_max %>% filter(note_id == 557484673L) %>% arrange(sentence_id) %>% view()
-
 
 
 recall_max <- prediction_max %>% 
@@ -179,17 +169,6 @@ recall_max <- prediction_max %>%
 recall_max %>% summarise(mean(recall))
 
 recall_max %>% summarise(recall=sum(recall*support) / sum(support))
-
-
-# prediction_max %>% filter(note_id == 557484673L) %>% select(premise, label_ref) %>% unique()
-
-# prediction_max %>% filter(note_id == 557484673L) %>% 
-#   filter(label_ref==label_probe) %>% 
-#   mutate(label=label_ref) %>% 
-#   group_by(label, fold, label_level_1) %>% 
-#   summarise(recall = mean(prediction), support=n()) %>% 
-#   arrange(recall) %>% 
-#   mutate(label = factor(label, levels = unique(label))) 
 
 
 
