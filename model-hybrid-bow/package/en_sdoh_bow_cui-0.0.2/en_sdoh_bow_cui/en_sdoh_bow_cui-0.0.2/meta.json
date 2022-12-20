@@ -7,7 +7,7 @@
   "email":"d.lituiev@gmail.com",
   "url":"https://explosion.ai",
   "license":"MIT",
-  "spacy_version":">=3.2.1,<3.3.0",
+  "spacy_version":">=3.2.1,<3.5.0",
   "spacy_git_version":"bb26550e2",
   "vectors":{
     "width":300,
