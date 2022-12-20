@@ -12,15 +12,12 @@ It is advised to create a virtual environment for this package, e.g.:
 To install a model, e.g. `model-hybrid-bow`, run following in a shell:
 
 ```sh
-cd model-hybrid-bow/package/en_sdoh_bow_cui-0.0.2
-# OR
-cd model-cnn-ner/packages/en_sdoh_cnn_ner_cui-0.0.0
-
-pip install spacy
 pip install sklearn
 python -m spacy download en_core_web_md
 
-pip install .
+cd model-hybrid-bow/package/en_sdoh_bow_cui-0.0.2 && pip install . && cd -
+# OR
+cd model-cnn-ner/packages/en_sdoh_cnn_ner_cui-0.0.0 && pip install . && cd -
 ```
 
 from within Python:
