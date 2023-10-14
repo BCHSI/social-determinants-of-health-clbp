@@ -6,7 +6,6 @@ Home-page: https://explosion.ai
 Author: Benjamin Lacar, Dima Lituiev
 Author-email: d.lituiev@gmail.com
 License: MIT
-Platform: UNKNOWN
 
 Rule (Matcher) based Social determinants of health NER with a fine-grained window context bag-of-words classifier and a standard ontology extension interface (SNOMED_CT and CUI)
 
@@ -54,4 +53,3 @@ Rule (Matcher) based Social determinants of health NER with a fine-grained windo
 | `ENTS_P` | 85.31 |
 | `ENTS_R` | 84.48 |
 | `ENTS_F` | 84.89 |
-
