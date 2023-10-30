@@ -1,6 +1,6 @@
 # Models for extraction of Social Determinants of Health from clinical notes
 
-- RoBERTa NER: [model-roberta-ner](model-roberta-ner)
+- RoBERTa NER: [model-roberta-ner](https://huggingface.co/dlituiev/en_sdoh_roberta_cui)
 - CNN NER: [model-cnn-ner](model-cnn-ner)
 - Hybrid BoW-GBM NER: [model-hybrid-bow](model-hybrid-bow)
 
